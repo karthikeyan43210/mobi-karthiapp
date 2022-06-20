@@ -1,0 +1,13 @@
+version: '3.8'
+networks: # to create a custom bridge
+  karthibr111: 
+services:
+  karthiapp007:
+    image: karthiciapp:v1 
+    build: . 
+    container_name: karthicic1
+    ports:
+    - "1111:80"
+    restart: always 
+    networks: # use bridge created above 
+    - karthibr111
